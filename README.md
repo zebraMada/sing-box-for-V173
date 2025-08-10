@@ -1,5 +1,6 @@
 # sing-box
-
+```
+huawei home gateway v173
 processor       : 0
 model name      : ARMv7 Processor rev 1 (v7l)
 BogoMIPS        : 1594.16
@@ -25,11 +26,15 @@ CPU physical    : 1
 Hardware        : Hisilicon A9
 Revision        : 0000
 Serial          : 0000000000000000
+```
+```
 uname -an
 Linux (none) 5.10.0 #1 SMP Mon Dec 19 16:03:09 CST 2022 armv7l armv7l armv7l GNU/Linux
 exe infomation:
 ELF 32-bit LSB pie executable, ARM, EABI5 version 1 (SYSV), dynamically linked, interpreter /lib/ld-musl-arm.so.1, stripped
+```
 
+```
   git clone https://github.com/SagerNet/sing-box.git
   cd sing-box
   git checkout v1.11.9    ##1.12.0+ using new format of config.
@@ -37,7 +42,7 @@ ELF 32-bit LSB pie executable, ARM, EABI5 version 1 (SYSV), dynamically linked, 
   export CXX=arm-euler-linux-musleabi-g++
   CGO_ENABLED=0 GOOS=linux GOARCH=arm GOARM=5 go build  -ldflags "-s -w"   -tags "with_quic,with_utls,with_wireguard,with_gvisor,with_clash_api,with_v2ray_api,with_ech,with_dns_cache"   -o singbox-armv7  ./cmd/sing-box
   or using GOARM=7
-
+```
 
 The universal proxy platform.
 
